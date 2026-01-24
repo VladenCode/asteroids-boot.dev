@@ -8,3 +8,4 @@ LINE_WIDTH = 2
 
 #player turning speed (Moving around)
 PLAYER_TURN_SPEED = 300
+PLAYER_SPEED = 200
