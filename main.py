@@ -11,12 +11,13 @@ def main():
     fps = 60
     dt = 0
 
-    # Declaring Groups to unclutter the game
+    # Declaring Groups and write class into groups
     updatable = pygame.sprite.Group()
     drawable = pygame.sprite.Group()
-    
+
     Player.containers = (updatable, drawable)
 
+    # Create instance
     player = Player((SCREEN_WIDTH / 2), (SCREEN_HEIGHT / 2))
 
     while True:
