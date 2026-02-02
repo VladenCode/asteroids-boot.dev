@@ -39,6 +39,14 @@ def main():
         updatable.update(dt)
 
         for asteroid in asteroids:
+            for shot in shots:
+                if asteroid.collide_with(shot):
+                    log_event("asteroid_shot")
+                    pygame.sprite.Sprite.kill(asteroid)
+                    pygame.sprite.Sprite.kill(shot)
+
+        #destory asteroid
+        for asteroid in asteroids:
             if asteroid.collide_with(player):
                 log_event("player_hit")
                 print("Game over!")
